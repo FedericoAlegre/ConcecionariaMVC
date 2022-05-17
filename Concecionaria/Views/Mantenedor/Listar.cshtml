@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<VehiculoModel>
+
+<div class="card">
+    <div class="card-header">
+        Lista Vehiculo
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Año</th>
+                    <th scope="col">Kilometros</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Marca</td>
+                            <td>@item.Modelo</td>
+                            <td>@item.Año</td>
+                            <td>@item.Kilometros</td>
+                            <td>@item.Precio</td>
+                        </tr> 
+                    }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
